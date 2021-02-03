@@ -256,9 +256,12 @@
 	justify-content: space-between;
 }
 
-.product-box :nth-child(4), .product-box :nth-child(5), .product-box :nth-child(6) {
+/* костыль */
+/* .product-box :nth-child(4),
+.product-box :nth-child(5),
+.product-box :nth-child(6) {
 	margin: 0;
-}
+} */
 
 .product {
 	width: 360px;
@@ -288,9 +291,10 @@
 	align-items: center;
 	font-size: 14px;
 	line-height: 17px;
+	fill: #ffffff;
 }
 
-.product__hover-link img {
+.product__hover-link svg {
 	margin: 0 10px 0 0;
 }
 
@@ -327,13 +331,14 @@
 }
 
 .produts-button {
-	margin: 48px 0 0 0;
+	margin: 18px 0 0 0;
 	font-size: 16px;
 	line-height: 19px;
 	color: #F26376;
 	border: 1px solid #FF6A6A;
 	padding: 15px 40px;
 	text-decoration: none;
+	transition: 200ms;
 }
 
 .produts-button:hover {
@@ -562,11 +567,66 @@ background: #F8F3F4;
 
 .products__filter {
 	display: flex;
-    justify-content: space-around;
+	justify-content: space-around;
+	align-self: self-start;
 }
 
-.products__filter__svg-margin {
-	margin: 0 0 0 10px;
+.productus__filter__filter-box {
+	position: relative;
+}
+
+.productus__filter__filter-box:hover .productus__filter__filter-box__filter-box-list {
+	display: block;
+}
+
+.productus__filter__filter-box:hover .products__filter__heading {
+	color: #EF5B70;
+	fill: #EF5B70;
+}
+
+.productus__filter__filter-box__filter-box-list {
+	position: absolute;
+	display: none;
+	border: 1px solid;
+	min-width: 340px;
+    padding: 54px 17px 0 17px;
+    z-index: 1;
+    top: -13px;
+    left: -16px;
+	background: #FFFFFF;
+	box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+	font-size: 14px;
+    line-height: 17px;
+}
+
+.products__filter__heading-list {
+	list-style: none;
+}
+
+.products__filter__heading-list-item {
+	margin: 0 0 16px 0;
+}
+
+.products__filter__heading-list__text {
+	text-transform: uppercase;
+    border-left: 5px solid #EF5B70;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 11px;
+    display: block;
+}
+
+.products__filter__heading-sub-list {
+	list-style: none;
+	margin: 24px 15px;
+}
+
+.products__filter__heading-sub-list-item {
+	margin: 0 0 11px 0;
+}
+
+.products__filter__heading-list__pink:hover {
+	color: #EF5B70;
+
 }
 
 .products__filter__heading {
@@ -575,17 +635,24 @@ background: #F8F3F4;
 	line-height: 17px;
 	color: #000000;
 	fill: #000000;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
 }
 
 .products__filter__heading:hover,
-.products__filter__list-item:hover {
+.products__filter__list-item:hover .products__filter__list-item-pink {
 	color: #EF5B70;
 	fill: #EF5B70;
 }
 
+.products__filter__svg-margin {
+	margin: 0 0 0 10px;
+}
+
 .products__filter__list {
 	display: flex;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 285px;
     list-style: none;
 }
 
@@ -593,22 +660,33 @@ background: #F8F3F4;
 	font-size: 14px;
 	line-height: 17px;
 	color: #6F6E6E;
-	margin: 0 0 0 50px;
+	margin: 0 0 0 30px;
 	position: relative;
 	fill: #6F6E6E;
+	text-transform: uppercase;
+	white-space: nowrap;
 }
 
 .products__filter__list-item__form {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-    width: 79px;
     background: #FFFFFF;
 	box-shadow: 6px 4px 35px rgb(0 0 0 / 21%);
 	visibility: hidden;
 	z-index: 5;
+	padding: 10px 30px 10px 10px;
+    left: -10px;
 }
 
 .products__filter__list-item:hover .products__filter__list-item__form {
 	visibility: visible;
+}
+
+.products__filter__list-item__form__div-margin {
+	margin: 0 0 5px 0;
+}
+
+.products__filter__list-item__form__label-margin {
+	margin: 0 0 0 10px;
 }
