@@ -701,8 +701,25 @@ background: #F8F3F4;
     justify-content: center;
     background: #F7F7F7;
 	border: 1px solid #EAEAEA;
-	
 }
+
+
+/***** Лютая дичь, которая не робит(. Хотелось сделать стрелки псевдоэлементом с ховером. Если подскажите как, буду рад *****/
+/* 
+.product-page__main-product-img-box::before {
+	display: block;
+	content: "";
+	content: url('data:image/svg+xml; utf8, <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.6998 3.7499L4.9498 11.4999L12.6998 19.2499L11.1498 22.3499L0.299805 11.4999L11.1498 0.649902L12.6998 3.7499Z" fill="black"/></svg>');
+	width: 47px;
+	height: 47px;
+	border: 1px solid #000;
+	/* fill: yellow; */
+/* }
+
+.product-page__main-product-img-box::before:hover {
+	content: url('data:image/svg+xml; utf8, <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.6998 3.7499L4.9498 11.4999L12.6998 19.2499L11.1498 22.3499L0.299805 11.4999L11.1498 0.649902L12.6998 3.7499Z" fill="blue"/></svg>');
+} 
+******************************************/
 
 .product-page__main-product-img{
 
@@ -732,6 +749,19 @@ background: #F8F3F4;
     line-height: 22px;
 	color: #4D4D4D;
 	margin: 27px 0 0 0;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__description__heading::after {
+	content: "";
+    display: block;
+    width: 63px;
+    height: 3px;
+    background-color: #EF5B70;
+    top: 12px;
+    position: relative;
 }
 
 .product__description__text {
@@ -745,7 +775,20 @@ background: #F8F3F4;
 	margin: 32px 0 130px 0;
 	font-size: 24px;
     line-height: 29px;
-    color: #EF5B70;
+	color: #EF5B70;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__description__price::after {
+	content: "";
+    display: block;
+    width: 761px;
+    height: 1px;
+    background-color: #EAEAEA;
+    top: 65px;
+    position: relative;
 }
 
 .product__description-nav {
@@ -760,4 +803,19 @@ background: #F8F3F4;
 .product-description-button {
 	margin: 50px 0 0 0;
 	background: transparent;
+	fill: #EF5B70;
+	display: flex;
+	align-items: center;
+}
+
+.product-description-button svg {
+	margin: 0 10px 0 0;
+}
+
+.product-description-button:hover {
+	fill: #EAEAEA;
+}
+
+.product-page-product-box-margin {
+	margin: 80px 0 98px 0;
 }
