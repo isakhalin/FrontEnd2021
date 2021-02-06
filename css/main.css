@@ -468,6 +468,11 @@
 	border: none;
 	color: #ffffff;
 }
+
+.subscribe-box__button-box__button:hover {
+	background: #f15267;
+	color:#ffffff;
+}
     /*******/
 
 /* =================== Подвал ==================== */
@@ -628,7 +633,6 @@ background: #F8F3F4;
 
 .products__filter__heading-list__pink:hover {
 	color: #EF5B70;
-
 }
 
 .products__filter__heading {
@@ -693,16 +697,56 @@ background: #F8F3F4;
 	margin: 0 0 0 10px;
 }
 
+.products__pagination {
+	margin: 18px 0 0 0;
+	width: 300px;
+	border: 1px solid #EBEBEB;
+	border-radius: 5px;
+}
+
+.products__pagination-list {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #C4C4C4;
+}
+
+.products__pagination-list-item {
+	display: flex;
+}
+
+.products__pagination-list-item:hover {
+	color: #EF5B70;
+	fill: #EF5B70;
+}
 
 /* ==============Product============== */
 
 .product-page__main-product-img-box {
 	display: flex;
-    justify-content: center;
+	justify-content: space-between;
+	align-items: center;
     background: #F7F7F7;
 	border: 1px solid #EAEAEA;
 }
 
+.product-page__main-product-img-box__arrows {
+	display: flex;
+	width: 47px;
+	height: 47px;
+	background: rgba(42, 42, 42, 0.15);
+	justify-content: center;
+	align-items: center;
+}
+
+.product-page__main-product-img-box__arrows:hover {
+	fill: #EF5B70;
+}
 
 /***** Лютая дичь, которая не робит(. Хотелось сделать стрелки псевдоэлементом с ховером. Если подскажите как, буду рад *****/
 /* 
@@ -721,9 +765,9 @@ background: #F8F3F4;
 } 
 ******************************************/
 
-.product-page__main-product-img{
-
-}
+/* .product-page__main-product-img {
+	
+	} */
 
 .product-page__product__description {
 	display: flex;
@@ -791,10 +835,6 @@ background: #F8F3F4;
     position: relative;
 }
 
-.product__description-nav {
-
-}
-
 .product__description__nav-list {
 	display: flex;
     list-style: none;
@@ -818,4 +858,38 @@ background: #F8F3F4;
 
 .product-page-product-box-margin {
 	margin: 80px 0 98px 0;
+}
+
+/* ============== Cart ============== */
+
+.nav-cart {
+	justify-content: flex-start;
+}
+
+.cart-box {
+
+}
+
+.cart-box__left-box {
+
+}
+
+.left-box__cards-box {
+
+}
+
+.left-box__button-box {
+
+}
+
+.cart-box__right-box {
+
+}
+
+.right-box__form {
+
+}
+
+.right-box__button-box {
+	
 }
