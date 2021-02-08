@@ -867,7 +867,9 @@ background: #F8F3F4;
 }
 
 .cart-box {
-
+	padding: 96px 0 128px 0;
+	display: flex;
+    justify-content: space-between;
 }
 
 .cart-box__left-box {
@@ -878,8 +880,116 @@ background: #F8F3F4;
 
 }
 
-.left-box__button-box {
+/* .left-box__cards-box:first-child {
+	margin: 0;
+} */
 
+
+.card-box__card {
+	display: flex;
+    max-width: 652px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+	margin: 40px 0 0 0;
+}
+
+.card-box__card:first-child {
+	margin: 0;
+}
+
+.card__img {
+
+}
+
+.card__text {
+	display: flex;
+    background: #fff;
+    flex-direction: column;
+    width: 100%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #575757;
+    padding: 22px 31px 62px 31px;
+}
+
+.card__card-heading {
+	max-width: 200px;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 29px;
+    color: #222222;
+    margin: 0 0 36px 0;
+}
+
+.card-specs {
+	margin: 6px 0 0 0;
+}
+
+.card-specs__price {
+	color: #f26d7f;
+}
+
+.card-specs__quantity {
+	border: 1px solid #EAEAEA;
+    padding: 1px 16px 1px 16px;
+}
+
+.close {
+    position: absolute;
+    top: 36px;
+	right: 22px;
+	width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+.close::after {
+	content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: black;
+    transform: rotate(-45deg);
+}
+
+.close::before {
+	content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: black;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.close:hover::after,
+.close:hover::before {
+	background: #f26d7f;
+}
+
+.close:active::after,
+.close:active::before {
+	background: blue;
+}
+
+.left-box__button-box {
+	display: flex;
+    justify-content: space-between;
+}
+
+.button-box-btw {
+	background-color: transparent;
+    padding: 17px 40px 17px 40px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin: 72px 0 0 0;
 }
 
 .cart-box__right-box {
@@ -891,5 +1001,8 @@ background: #F8F3F4;
 }
 
 .right-box__button-box {
-	
+
 }
+
+
+
