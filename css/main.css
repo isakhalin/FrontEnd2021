@@ -1,3 +1,48 @@
+/* @font-face {
+	font-family: lato;
+	src: url(../fonts/lato-light.ttf);
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: lato;
+	src: url(../fonts/lato-regular.ttf);
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: lato;
+	src: url(../fonts/lato-bold.ttf);
+	font-weight: 700;
+	font-style: normal;
+} */
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/') format('woff2'),
+         url('../fonts/lato-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-light.woff2') format('woff2'),
+         url('../fonts/lato-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-regular.woff2') format('woff2'),
+         url('../fonts/lato-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -905,7 +950,7 @@ background: #F8F3F4;
     background: #fff;
     flex-direction: column;
     width: 100%;
-    font-family: Lato;
+    font-family: lato;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -916,11 +961,14 @@ background: #F8F3F4;
 
 .card__card-heading {
 	max-width: 200px;
-    text-transform: uppercase;
+	text-transform: uppercase;
+	font-family: lato;
+    font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     line-height: 29px;
     color: #222222;
-    margin: 0 0 36px 0;
+    margin: 0 125px 36px 0;
 }
 
 .card-specs {
@@ -983,26 +1031,164 @@ background: #F8F3F4;
 .button-box-btw {
 	background-color: transparent;
     padding: 17px 40px 17px 40px;
-    font-family: Lato;
+    font-family: lato;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
-    margin: 72px 0 0 0;
+	color: #000000;
+	text-transform: uppercase;
+	margin: 72px 0 0 0;
+	border: 1px solid #A4A4A4;
+	transition: 0.3s;
+}
+
+.button-box-btw:hover {
+	color: #fff;
+	background: #f26d7f;
+}
+
+.button-box-btw:active {
+	color: #fff;
+	background: #f85167;
 }
 
 .cart-box__right-box {
-
+	padding: 15px 0 0 0;
 }
 
 .right-box__form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
 
+.right-box__form-heading {
+	text-transform: uppercase;
+    font-family: lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+}
+
+.right-box__form-input {
+	width: 360px;
+    height: 45px;
+    margin: 20px 0 0 0;
+    border: 1px solid #A4A4A4;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #222;
+    padding: 0px 17px 0 17px;
+    text-transform: capitalize;
+}
+
+.right-box__form-input::placeholder {
+	color: #B1B1B1;
+}
+
+.right-box__form-button {
+	margin: 24px 0 0 0;
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #A4A4A4;
+    font-family: lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #4A4A4A;
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+
+.right-box__form-button:hover {
+	color: #fff;
+	background: #f26d7f;
+}
+
+.right-box__form-button:active {
+	color: #fff;
+	background: #f5576c;
 }
 
 .right-box__button-box {
-
+	display: flex;
+    flex-direction: column;
+	align-items: flex-end;
+	margin: 60px 0 0 0;
+    padding: 40px;
+    background: #F5F3F3;
 }
 
+.right-box__sub-total-price-text {
+	font-family: lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+	color: #4A4A4A;
+	text-transform: uppercase;
+}
 
+.right-box__sub-total-price {
+	margin: 0 0 0 20px;
+}
 
+.right-box__grand-total-price-text {
+	font-family: lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+	color: #222222;
+	text-transform: uppercase;
+    margin: 12px 0 0 0;
+}
+
+.right-box__grand-total-price {
+	margin: 0 0 0 20px;
+	color: #f26d7f;
+}
+
+.right-box__checkout {
+	padding: 15px 40px 15px 40px;
+	margin: 40px 0 0 0;
+    text-transform: uppercase;
+    font-family: lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+	background: #F16D7F;
+	transition: 0.3s;
+	border: none;
+	position: relative;
+}
+
+.right-box__checkout:hover {
+    color: #FFFFFF;
+	background: #e74a5f;
+}
+
+.right-box__checkout:active {
+    color: #FFFFFF;
+	background: #eb2d46;
+}
+
+.right-box__line:before {
+	content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #E2E2E2;
+    position: absolute;
+    top: -17px;
+    left: 0;
+}
