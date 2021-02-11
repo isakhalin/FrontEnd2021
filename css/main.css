@@ -1045,11 +1045,6 @@ background: #F8F3F4;
 
 }
 
-/* .left-box__cards-box:first-child {
-	margin: 0;
-} */
-
-
 .card-box__card {
 	display: flex;
     max-width: 652px;
@@ -1311,4 +1306,100 @@ background: #F8F3F4;
     position: absolute;
     top: -17px;
     left: 0;
+}
+
+/* ============== Registration ============== */
+
+.registration {
+	display: flex;
+    justify-content: space-between;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding: 64px 0 96px 0;
+}
+
+.registration__form {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: capitalize;
+}
+
+.registration__form-heading {
+	font-size: 16px;
+    line-height: 19px;
+    color: #222;
+}
+
+.registration__form-input {
+	min-width: 360px;
+    padding: 14px;
+    margin: 20px 0 0 0;
+}
+
+.registration__form-input::placeholder {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 16px;
+	color: #B1B1B1;	
+	text-transform: capitalize;
+}
+
+.registration__form-radio-box {
+	margin: 30px 0 35px 0;
+    display: flex;
+}
+
+.form-radio-box__label {
+	font-size: 11px;
+    line-height: 13px;
+    margin: 0 20px 0 10px;
+}
+
+.registration__form-text {
+	text-transform: none;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin: 16px 0 0 0;
+}
+
+.registration__btn {
+	margin: 40px 0 0 0;
+    padding: 16px 29px;
+    border: none;
+    background: #F16D7F;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.registration__right-box {
+
+}
+
+.registration__right-box-heading {
+
+}
+
+.registration__right-box-text {
+
+}
+
+.registration__right-box-list {
+
+}
+
+.registration__right-box-item {
+
 }
