@@ -50,7 +50,7 @@
 .page-header__nav {
 	display: flex;
 	justify-content: space-between;
-	padding: 19px 0;
+	padding: 19px 30px;
 }
 
 .page-header__logo-box {
@@ -226,6 +226,7 @@
 .page-header__info__content {
 	display: flex;
 	align-items: center;
+	padding: 0 90px 0 0;
 }
 
 .page-header__info__content__img {
@@ -235,14 +236,23 @@
 	background-image: url(../img/manInBlack1.png);
 	width: 100%;
 	min-height: 764px;
-	margin: 0 90px 0 0;
 }
 
 .page-header__info__content__textbox {
-	border-left: 12px solid #F16D7F;
-	padding: 0 0 0 16px;
-	max-width: 400px;
-    width: 100%;
+	min-width: 380px;
+	/* width: 100%; */
+	position: relative;
+}
+
+.page-header__info__content__textbox::before {
+	display: block;
+    content: "";
+    width: 12px;
+    height: 92px;
+    background: #F16D7F;
+    position: absolute;
+    top: 2px;
+    left: -30px;
 }
 
 .page-header__info__content__text {
@@ -451,6 +461,7 @@
 	padding: 15px 40px;
 	text-decoration: none;
 	transition: 200ms;
+	background: transparent;
 }
 
 .produts-button:hover {
@@ -541,7 +552,7 @@
 	line-height: 24px;
 	text-align: center;
 	color: #222224;
-	margin: 30px 0 0 0;
+	margin: 35px 0 0 0;
 	max-width: 360px;
 }
 
@@ -574,7 +585,7 @@
 }
 
 .subscribe-box__button-box {
-	margin: 32px 0 0 0;
+	margin: 27px 0 0 0;
 }
 
 .subscribe-box__button-box__form {
@@ -1440,6 +1451,10 @@ background: #F8F3F4;
 /* ============== media 768px ================== */
 
 @media (max-width: 768px) {
+	.page-header__info__content {
+		padding: 0 10px 0 0;
+	}
+
 	.page-header__info__content__img {
 		min-height: 368px;
 		background-size: contain;
@@ -1450,7 +1465,161 @@ background: #F8F3F4;
 		font-size: 24px;
 	}
 
+	.page-header__info__content__textbox {
+		min-width: 300px;
+	}
+
 	.text-brand {
 		font-size: 44px;
 	}
+
+	.category-box {
+		padding: 0 17px;
+		margin: 20px 0 0 0;
+	}
+
+	/* .category {
+		height: 167px;
+	} */
+
+	.category__img {
+		height: 168px;
+	}
+
+	.last-category__img {
+		height: 116px;
+	}
+
+	.products {
+		margin: 155px 0 0 0;
+		padding: 0 16px;
+	}
+
+	.product {
+		margin: 0 0 16px 0;
+	}
+
+	.product-box {
+		margin: 74px 0 0 0;
+	}
+
+	.features {
+		display: flex;
+		margin: 65px 0 0 0;
+	}
+
+	.features-flexbox {
+		flex-direction: column;
+		padding: 0 0 64px 0;
+	}
+
+	.features-box {
+		margin: 48px 0 0 0;
+	}
+
+	.subscribe-flexbox {
+		flex-direction: column;
+		padding: 55px 0 140px 0;
+	}
+
+	.subscribe-box_subscribe {
+		margin: 90px 0 0 0;
+	}
+}
+
+/* ============== media 690px ================== */
+	
+@media (max-width: 690px) {
+	.page-header__info__content__img {
+		display: none;
+	}
+
+	.page-header__info__content {
+    	justify-content: center;
+		height: 368px;
+	}
+
+	.page-header__info__content__textbox {
+		min-width: 280px;
+	}
+}
+
+/* ============== media 375px ================== */
+
+@media (max-width: 375px) {
+
+	.page-header__nav {
+		padding: 19px 16px;
+	}
+
+	.page-header__button-box {
+		align-self: center;
+	}
+
+	.page-header__list {
+		justify-content: flex-end;
+	}
+
+	.page-header__list-item-profile {
+		display: none;
+	}
+
+	.page-header__list-item-cart {
+		display: none;
+	}
+
+	.page-header__info__content {
+		padding: 0 0 0 56px;
+	}
+
+	.page-header__info__content__text {
+		font-size: 20px;
+	}
+
+	.text-brand {
+		font-size: 38px;
+	}
+	
+	.category-box {
+		padding: 64px 17px;
+		margin: 0 0 0 0;
+	}
+
+	.category__img {
+		height: 247px;
+    	margin: 0 0 32px 0;
+	}
+
+	.category:after {
+		max-height: 247px;
+	}
+
+	.last-category {
+		margin: 0 0 0 0;
+	}
+	
+	.last-category::after {
+		max-height: 111px;
+	}
+
+	.last-category__img {
+		height: 111px;
+		width: 346px;
+		margin: 0 0 0 0;
+	}
+
+	.products {
+		margin: 0 0 0 0;
+		padding: 0 8px 0 8px;
+	}
+
+	.copyright {
+		padding: 43px 0 9px 0;
+   		flex-direction: column-reverse;
+	}
+
+	.copyright-box {
+		margin: 0 0 40px 0;
+	}
+
 }
